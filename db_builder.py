@@ -19,8 +19,8 @@ with open('csv/courses.csv') as csvfile:
 	for row in courses:
 		command = "INSERT INTO courses VALUES (\'" + row[courses.fieldnames[0]] + "\', " + row[courses.fieldnames[1]] + ", " + row[courses.fieldnames[2]] + ");"
 		c.execute(command);
-	c.execute("SELECT * FROM courses;")
-	print c.fetchall()
+	#c.execute("SELECT * FROM courses;")
+	#print c.fetchall()
 
 with open('csv/peeps.csv') as csvfile: #Wow it's almost like this is just a copy/paste of the last one
 	peeps = csv.DictReader(csvfile)
@@ -29,8 +29,8 @@ with open('csv/peeps.csv') as csvfile: #Wow it's almost like this is just a copy
 	for row in peeps:
 		command = "INSERT INTO peeps VALUES (\'" + row[peeps.fieldnames[0]] + "\', " + row[peeps.fieldnames[1]] + ", " + row[peeps.fieldnames[2]] + ");"
 		c.execute(command);
-	c.execute("SELECT * FROM peeps;")
-	print c.fetchall()
+	#c.execute("SELECT * FROM peeps;")
+	#print c.fetchall()
 
 
 #command = ""          #put SQL statement in this string
